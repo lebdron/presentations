@@ -14,6 +14,10 @@ https://github.com/jtv/libpqxx
 
 +++
 
+We use `pq` to connect to PostgreSQL, which works as `WorldStateView` - aggregate of all transactions.
+
++++
+
 Example
 
 ```C++

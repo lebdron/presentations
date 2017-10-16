@@ -4,7 +4,7 @@ https://github.com/martinmoene/optional-lite/
 
 +++
 
-`optional-lite` is legacy and will be changed to `boost::optional`
+`optional-lite` is legacy dependency and will be replaced by `boost::optional`
 
 +++
 
@@ -57,4 +57,4 @@ auto operator | (T t, Func f) -> decltype(f(*t)) {
 }
 ```
 
-E.g., if t is true, then apply transformation, otherwise just return nullopt.
+E.g., if `t` is true, then apply transformation, otherwise just return nullopt.

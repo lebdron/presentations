@@ -16,16 +16,28 @@ http://www.boost.org/
 +++
 
 ```c++
-boost::variant<A, B, C, D> v;
-v = A();
-v = B();
-v = C();
-v = D();
+boost::variant<
+    AddPeer,
+    TransferAsset,
+    ...
+  > v;
+
+/* v  can be one of */
+v = TransferAsset();
+v = AddPeer();
+
+boost::apply_visitor(
+  make_visitor(
+    [](AddPeer const& a)      { /* v has AddPeer */      },
+    [](TransferAsset const& a){ /* v has TransferAsset */},
+  ),
+  v /* apply visitor to variant */
+)
 ```
 
 +++
 
-To install all boost libraries locally:
+Recommended approach is to install all boost libraries locally:
 
 Debian
 ```bash

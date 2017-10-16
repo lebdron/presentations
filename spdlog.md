@@ -7,6 +7,13 @@ https://github.com/gabime/spdlog
 
 +++
 
+We use `spdlog` because of:
+- good output customization
+- good formatting
+- speed 
+
++++
+
 Code example
 
 ```C++
