@@ -27,7 +27,7 @@ cpp_redis::client client;
 client.connect();
 
 client.set("hello", "42");
-client.get("hello", [](cpp_redis::reply& reply) {
+client.get("hello", [] (cpp_redis::reply& reply) {
   std::cout << reply << std::endl;
 });
 

@@ -28,8 +28,8 @@ v = AddPeer();
 
 boost::apply_visitor(
   make_visitor(
-    [](AddPeer const& a)      { /* v has AddPeer */      },
-    [](TransferAsset const& a){ /* v has TransferAsset */},
+    [] (AddPeer const& a)      { /* v has AddPeer */      },
+    [] (TransferAsset const& a){ /* v has TransferAsset */},
   ),
   v /* apply visitor to variant */
 )
