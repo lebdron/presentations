@@ -45,5 +45,5 @@ $ sudo apt-get install libboost-all-dev
 ```
 OSX
 ```bash
-$ brew install libboost-all-dev
+$ brew install boost
 ```
